@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lesson 01 - Hello Javascript</title>
+    </head>
+    <body style="text-align: center">
+        <h1 id="demo-text">HocPham - SWE</h1>
+        <button type="button" onclick="updateTextStyles()">Đổi màu và nền Text</button>
+        <script>
+            const updateTextStyles = () => {
+                let h1 = document.getElementById("demo-text");
+                if (h1.style.color !== "white") {
+                    h1.style.color = "white";
+                    h1.style.backgroundColor = "black";
+                } else {
+                    h1.style.color = "black";
+                    h1.style.backgroundColor = "transparent";
+                }
+            };
+        </script>
+
+        <hr />
+
+        <img id="demo-bulb" src="./images/pic_bulboff.gif" alt="Bulb Off" /> <br />
+
+        <button onclick="setLight('on')">Light On</button>
+        <button onclick="setLight('off')">Light Off</button>
+        <button onclick="toggleLight()">Toggle Light</button>
+
+        <button onclick="setLightBool('on')">Light On</button>
+        <button onclick="setLightBool('off')">Light Off</button>
+        <button onclick="setLightBool()">Toggle Light</button>
+        <script>
+            const bulb = document.getElementById("demo-bulb");
+            let isOn = false;
+
+            const setLight = (action) => {
+                isOn = action === undefined ? !isOn : action === "on";
+                bulb.src = isOn ? "./images/pic_bulbon.gif" : "./images/pic_bulboff.gif";
+            };
+
+            const toggleLight = () => setLight();
+
+            const setLightBool = setLight;
+
+            // let globalLight = "off";
+
+            // let isOn = false;
+            // const setLightBool = (action) => {
+            //     if (action === undefined) {
+            //         isOn = !isOn;
+            //     } else {
+            //         if (action === "on") {
+            //             isOn = true;
+            //             globalLight = "on";
+            //         } else {
+            //             isOn = false;
+            //             globalLight = "off";
+            //         }
+            //     }
+
+            //     document.getElementById("demo-bulb").src = isOn ? "./images/pic_bulbon.gif" : "./images/pic_bulboff.gif";
+            // };
+
+            // const setLight = (action) => {
+            //     let source = "";
+            //     if (action === "on") {
+            //         source = "./images/pic_bulbon.gif";
+            //         globalLight = "on";
+            //         isOn = true;
+            //     } else {
+            //         source = "./images/pic_bulboff.gif";
+            //         globalLight = "off";
+            //         isOn = false;
+            //     }
+            //     document.getElementById("demo-bulb").src = source;
+            // };
+
+            // const toggleLight = () => {
+            //     if (globalLight === "off") {
+            //         setLight("on");
+            //     } else {
+            //         setLight("off");
+            //     }
+            // };
+        </script>
+    </body>
+</html>
