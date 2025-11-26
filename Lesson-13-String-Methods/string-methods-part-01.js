@@ -33,4 +33,16 @@ const str6 = "JS,TS,React,Node,C#,.NET";
 console.log(`string after split(): ${str6.split(",")}`);
 
 // slice() - trả về một chuỗi con từ một chuối gốc ban đầu, từ vị trí startIndex đến endIndex (ko bao gồm)
-// substring()
+const str7 = "Javasript is fun but not easy";
+const sliceResult01 = str7.slice(0, 10);
+const sliceResult02 = str7.slice(10, 0);
+console.log("log ~ :38 ~ sliceResult01:", sliceResult01);
+console.log("log ~ :39 ~ sliceResult02:", sliceResult02);
+
+// substring() - khá giống slice() trả về một chuỗi con từ một chuỗi gốc ban đầu.
+// Tuy nhiên khác với slice() ở điểm sẽ hoán đổi vị trí khi startIndex lớn hơn endIndex
+const str8 = "Javasript is fun but not easy";
+const substringResult01 = str8.substring(0, 10);
+const substringResult02 = str8.substring(10, 0);
+console.log("log ~ :45 ~ substringResult01:", substringResult01);
+console.log("log ~ :46 ~ substringResult02:", substringResult02);
