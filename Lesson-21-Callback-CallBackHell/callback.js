@@ -16,7 +16,7 @@
  */
 
 // ===1. Callback là một hàm được truyền vào một hàm khác như một đối số,
-//   và hàm đó được gọi sau khi hàm kia thực hiện xong. ===
+// và hàm đó được gọi sau khi hàm kia thực hiện xong. ===
 let greet = (name, callback) => {
     console.log(`Hello ${name}`);
     callback();
