@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript Access DOM</title>
+
+        <style>
+            .hightlight {
+                font-size: 24px;
+                color: red;
+            }
+        </style>
+
+        <script src="./dom.js" async></script>
+    </head>
+    <body>
+        <div id="username">TrungQuanDev - Một Lập trình viên</div>
+        <div class="skill">ReactJS</div>
+        <div class="skill">JavaScript</div>
+        <br />
+
+        <img id="image" src="https://placehold.net/default.png" alt="Description of image" width="450" height="250" />
+
+        <br />
+        <a href="https://www.google.com" target="_blank" id="go-to-google">Go to Google</a>
+        <br />
+        <br />
+
+        <div id="parent-div"></div>
+        <button onclick="updateDOM()">Update DOM</button>
+    </body>
+</html>

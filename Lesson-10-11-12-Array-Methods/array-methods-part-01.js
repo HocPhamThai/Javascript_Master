@@ -28,7 +28,7 @@ arr.forEach((number, index) => {
     console.log(`Index - ${index} : Value - ${number}`);
 });
 
-// map() - Tạo mảng mới với các phần tử được biến đổi từ mảng gố, ví dụ bình phương từng phần tử
+// map() - Tạo mảng mới với các phần tử được biến đổi từ mảng gốc, ví dụ bình phương từng phần tử
 let squaredNumbers = arr.map((number) => {
     return number * number;
 });
